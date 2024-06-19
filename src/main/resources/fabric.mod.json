@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "macebut3d",
+	"version": "${version}",
+	"name": "Mace but 3D",
+	"description": "Adds a clean 3D model that appears while holding the mace",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/macebut3d/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"volery.macebut3d.MaceBut3D"
+		],
+		"client": [
+			"volery.macebut3d.MaceBut3DClient"
+		]
+	},
+	"mixins": [
+		"macebut3d.mixins.json",
+		{
+			"config": "macebut3d.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
